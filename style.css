@@ -1,0 +1,212 @@
+/* 
+   Landing Page Go Media - Styles
+   Extracted directly from gonetwork.vn source
+*/
+
+:root {
+    --primary-blue: #082774;
+    --gradient-start: #0C2A72;
+    --gradient-end: #6025E1;
+    --accent-orange: #ff5e00;
+    --text-color: #2d2d2d;
+    --white: #ffffff;
+    --light-gray: #f1f1f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* HEADER STYLES */
+#header {
+    width: 100%;
+}
+
+#top-bar {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    padding: 8px 0;
+    color: var(--white);
+    font-size: 13px;
+}
+
+.top-bar-left a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.top-bar-left a.active {
+    opacity: 0.7;
+}
+
+.top-bar-center p {
+    font-weight: 400;
+}
+
+#masthead {
+    background-color: var(--white);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#logo img {
+    max-height: 90px;
+    display: block;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-menu ul li {
+    margin: 0 12px;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.main-menu ul li a:hover, .main-menu ul li a.active {
+    color: var(--gradient-start);
+}
+
+.badge {
+    background-color: #cf2e2e;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+.btn-cta {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 99px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-cta:hover {
+    background: var(--accent-orange);
+}
+
+/* FOOTER STYLES */
+#footer {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    padding-top: 60px;
+    color: var(--white);
+}
+
+.footer-widgets {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.company-info {
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: text-decoration 0.3s;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-col i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.absolute-footer {
+    background-color: rgba(0,0,0,0.1);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .footer-widgets {
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-widgets {
+        grid-template-columns: 1fr;
+    }
+    #top-bar .top-bar-center {
+        display: none;
+    }
+}
